@@ -6,34 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="gfx/blackfire.png" />
+  <link rel="icon" type="image/png" href="graphics/blackfire.png" />
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Icons -->
-<script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-<style>
-.glow {
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
+  <style>
+    .glow {
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
 
-.glow:hover {
-  box-shadow: 0 0 15px #587dff;
-  transform: scale(1.05);
-}
+    .glow:hover {
+      box-shadow: 0 0 15px #587dff;
+      transform: scale(1.05);
+    }
 
-.fade-scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
+    .fade-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
 
-.fade-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+    .fade-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     html { scroll-behavior: smooth; }
 
     .nav-link {
@@ -68,199 +69,191 @@
 
 <body class="bg-slate-950 text-white overflow-x-hidden">
 
-<!-- ================= NAVBAR ================= -->
-<nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
-  <div class="backdrop-blur-xl bg-slate-950/70">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex items-center justify-between h-16">
+  <!-- ================= NAVBAR ================= -->
+  <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <div class="backdrop-blur-xl bg-slate-950/70">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+          <a href="#home" class="text-xl font-bold">
+            <span style="color: #587dff;">Fire</span><span class="text-white">Graphics</span>
+          </a>
 
-        <a href="#home" class="text-xl font-bold">
-          <span style="color: #587dff;">Fire</span><span class="text-white">Graphics</span>
-        </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#collabs" class="nav-link">Collaborations</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
 
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#services" class="nav-link">Services</a>
-          <a href="#about" class="nav-link">About Us</a>
-          <a href="#collabs" class="nav-link">Collaborations</a>
-          <a href="#contact" class="nav-link">Contact</a>
+          <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
         </div>
-
-        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-
       </div>
     </div>
-  </div>
 
-  <div id="mobileMenu" class="hidden bg-slate-950/95 backdrop-blur-xl border-b border-white/10 md:hidden">
-    <div class="px-6 py-4 flex flex-col gap-4">
-       <a href="#home" class="nav-link">Home</a>
+    <div id="mobileMenu" class="hidden bg-slate-950/95 backdrop-blur-xl border-b border-white/10 md:hidden">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="#home" class="nav-link">Home</a>
         <a href="#services" class="nav-link">Services</a>
         <a href="#about" class="nav-link">About Us</a>
         <a href="#collabs" class="nav-link">Collaborations</a>
         <a href="#contact" class="nav-link">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<!-- ================= HERO ================= -->
-<section id="home" class="min-h-screen flex items-center justify-center text-center px-6 relative">
-<div class="absolute inset-0 bg-gradient-to-b" style="background: linear-gradient(to bottom, #010016, #0a1a3a)"></div>
-
-  <div class="relative z-10 max-w-4xl fade-scroll">
-    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 mb-6">
-      <i data-lucide="sparkles" class="w-4 h-4" style="color: #587dff;"></i>
-      <span style="color: #82baf7;">Graphic Design APP</span>
-    </span>
-
-      <h1 class="text-5xl font-bold mb-6">
-        <span style="background: linear-gradient(to right, #587dff, #a3d7ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-        Fire Graphics
-      </span>
-    </h1>
-
-    <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
-      Fire Graphics is a graphic design app that provides you with the tools and resources to create stunning visuals for your projects. Whether you're a beginner or a professional, our app offers a wide range of features to help you bring your creative ideas to life.
-    </p>
-
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#collabs" class="px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-black/50" style="background: linear-gradient(to right, #587dff, #a3d7ff);">
-        View Collaborations →
-      </a>
-      <a href="#social" class="px-8 py-4 rounded-full border transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-black/50" style="border-color: #587dff; color: #a3d7ff;">
-        Contact Us →
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section id="services" class="py-20 bg-slate-900 px-6 fade-scroll" style="background-color: #001536;">
-  <div class="max-w-6xl mx-auto text-center mb-16">
-    <h2 class="text-4xl font-bold">Our <span style="color: #587dff;">Services</span></h2>  </div>
-
-  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-black/50 glow"><h3 style="color:#82baf7; font-weight: bold;">Design tutorials
-</h3><h5>Pro insights, and skills that turn ideas into stunning results.</h5></div>
-<div class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-black/50 glow"><h3 style="color:#82baf7; font-weight: bold;">Shows you designing skills
-</h3><h5>Expert advice that sharpens your skills and delivers standout results.</h5></div>
-<div class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-black/50 glow"><h3 style="color:#82baf7; font-weight: bold;">Professional designers advice</h3><h5>Learn powerful design skills with pro advice that elevates your creative results.</h5></div>
-<div class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-black/50 glow"><h3 style="color:#82baf7; font-weight: bold;">Amazing results</h3><h5>Transform your ideas into stunning visuals with our expert design tools.</h5></div>
-
-  </div>
-</section>
-
-<!-- ================= ABOUT ================= -->
-<section id="about" class="py-20 bg-slate-900 px-6 fade-scroll" style="background-color: #000820;">
-  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-    <img src="fglogo.png" class="rounded-3xl shadow-xl">
-    <div>
-      <h2 class="text-4xl font-bold mb-6">About <span style="color: #587dff;">Us</span></h2>
-      <p class="text-slate-400 mb-8">
-      Our team is formed by graphic designers, web developers, administrators, etc. 
-      </p>
-
-      <div class="grid grid-cols-3 gap-6 text-center">
-        <div class="p-4 bg-white/5 rounded-xl glow"><p class="text-3xl font-bold" style="color: #587dff;">QuickFire</p><p class="text-sm text-slate-400">Graphic designer and developer (app and web)</p></div>
-        <div class="p-4 bg-white/5 rounded-xl glow"><p class="text-3xl font-bold" style="color: #587dff;">Zodind</p><p class="text-sm text-slate-400">Update announcer and beta tester</p></div>
-        <div class="p-4 bg-white/5 rounded-xl glow"><p class="text-3xl font-bold" style="color: #587dff;">HArnau</p><p class="text-sm text-slate-400">Web organizer</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- ================= COLLABORATIONS ================= -->
-<section id="collabs" class="py-20 bg-slate-900 px-6 fade-scroll" style="background-color: #000820;">
-  <div class="max-w-6xl mx-auto text-center mb-12">
-    <h2 class="text-4xl font-bold"> <span style="color: #587dff;">Collaborations</span></h2>
-  </div>
+  <!-- ================= HERO ================= -->
+  <section id="home" class="min-h-screen flex items-center justify-center text-center px-6 relative">
+    <div class="absolute inset-0 bg-gradient-to-b" style="background: linear-gradient(to bottom, #010016, #0a1a3a)"></div>
 
-<!DOCTYPE html>
-<html>
-<body style="margin: -25px;;">
+    <div class="relative z-10 max-w-4xl fade-scroll">
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 mb-6">
+        <i data-lucide="sparkles" class="w-4 h-4" style="color: #587dff;"></i>
+        <span style="color: #82baf7;">Graphic Design APP</span>
+      </span>
 
-<div style="position:relative; width:100vw;">
-<h2 style="text-align:center; font-weight:bold;">Pure Refreshment X Fire Graphics</h2>
+      <h1 class="text-5xl font-bold mb-6">
+        <span style="background: linear-gradient(to right, #587dff, #a3d7ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Fire Graphics</span>
+      </h1>
 
-  <img src="Water-PNG-Image.png"
-       style="
-         width:100%;
-         display:block;
-       ">
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
+        Fire Graphics is a graphic design app that provides you with the tools and resources to create stunning visuals for your projects. Whether you're a beginner or a professional, our app offers a wide range of features to help you bring your creative ideas to life.
+      </p>
 
-  <!-- BOTTLE (on top) -->
-  <img src="purebottle.png"
-       style="
-         position:absolute;
-         bottom:10%;
-         left:50%;
-         transform:translateX(-50%);
-         width:35vw;      /* 👈 smaller bottle */
-         max-width:450px;
-         z-index:2;
-       ">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#collabs" class="px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-black/50" style="background: linear-gradient(to right, #587dff, #a3d7ff);">
+          View Collaborations →
+        </a>
+        <a href="#social" class="px-8 py-4 rounded-full border transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-black/50" style="border-color: #587dff; color: #a3d7ff;">
+          Contact Us →
+        </a>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- ================= SERVICES ================= -->
+  <section id="services" class="py-20 px-6 fade-scroll" style="background-color: #001536;">
+    <div class="max-w-6xl mx-auto text-center mb-16">
+      <h2 class="text-4xl font-bold">Our <span style="color: #587dff;">Services</span></h2>
+    </div>
 
-</body>
-</html>
+    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-black/50 glow">
+        <h3 style="color:#82baf7; font-weight: bold;">Design Tutorials</h3>
+        <h5>Pro insights and skills that turn ideas into stunning results.</h5>
+      </div>
+      <div class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-black/50 glow">
+        <h3 style="color:#82baf7; font-weight: bold;">Shows You Designing Skills</h3>
+        <h5>Expert advice that sharpens your skills and delivers standout results.</h5>
+      </div>
+      <div class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-black/50 glow">
+        <h3 style="color:#82baf7; font-weight: bold;">Professional Designer's Advice</h3>
+        <h5>Learn powerful design skills with pro advice that elevates your creative results.</h5>
+      </div>
+      <div class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-black/50 glow">
+        <h3 style="color:#82baf7; font-weight: bold;">Amazing Results</h3>
+        <h5>Transform your ideas into stunning visuals with our expert design tools.</h5>
+      </div>
+    </div>
+  </section>
 
-<!-- ================= SOCIAL ================= -->
-<section id="social" class="py-20 bg-slate-950 px-6 fade-scroll" style="background-color: #001536;">
-  <div class="max-w-4xl mx-auto text-center mb-12">
-    <h2 class="text-4xl font-bold">Find Us <span style="color: #587dff;">Online</span></h2>
-  </div>
-<p style="text-align: center; padding-bottom: 30px;"> Have you seen any errors? Improvements? Doubts? Mail Us!</p>
-  <div class="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <a href="mailto:quickfire534@gmail.com" class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 glow">Mail</a>
-    <a href="https://x.com/Quickfire_98" class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 glow">Twitter</a>
-    <a href="https://discord.gg/AyfMMPWQPQ" class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 glow">Community</a>
-  </div>
-</section>
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="py-20 px-6 fade-scroll" style="background-color: #000820;">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <img src="graphics/fglogo.png" class="rounded-3xl shadow-xl" alt="Fire Graphics Logo">
+      <div>
+        <h2 class="text-4xl font-bold mb-6">About <span style="color: #587dff;">Us</span></h2>
+        <p class="text-slate-400 mb-8">
+          Our team is formed by graphic designers, web developers, administrators, and more.
+        </p>
 
-<!-- ================= JS ================= -->
-<script>
-  lucide.createIcons();
+        <div class="grid grid-cols-3 gap-6 text-center">
+          <div class="p-4 bg-white/5 rounded-xl glow">
+            <p class="text-3xl font-bold" style="color: #587dff;">QuickFire</p>
+            <p class="text-sm text-slate-400">Graphic designer and developer (app and web)</p>
+          </div>
+          <div class="p-4 bg-white/5 rounded-xl glow">
+            <p class="text-3xl font-bold" style="color: #587dff;">Zodind</p>
+            <p class="text-sm text-slate-400">Update announcer and beta tester</p>
+          </div>
+          <div class="p-4 bg-white/5 rounded-xl glow">
+            <p class="text-3xl font-bold" style="color: #587dff;">HArnau</p>
+            <p class="text-sm text-slate-400">Web organizer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const navbar = document.getElementById('navbar');
+  <!-- ================= COLLABORATIONS ================= -->
+  <section id="collabs" class="py-20 px-6 fade-scroll" style="background-color: #000820;">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold"><span style="color: #587dff;">Collaborations</span></h2>
+    </div>
 
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
+    <div class="max-w-6xl mx-auto relative">
+      <h2 style="text-align:center; font-weight:bold; margin-bottom: 20px;">Pure Refreshment X Fire Graphics</h2>
+      <div style="position:relative; width:100%;">
+        <img style="display:block; margin:0 auto;" src="graphics/purebottle.png" width="50%">
+      </div>
+    </div>
+  </section>
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      navbar.classList.add('shadow-lg', 'shadow-black/30');
-    } else {
-      navbar.classList.remove('shadow-lg', 'shadow-black/30');
-    }
-  });
+  <!-- ================= SOCIAL ================= -->
+  <section id="social" class="py-20 px-6 fade-scroll" style="background-color: #001536;">
+    <div class="max-w-4xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold">Find Us <span style="color: #587dff;">Online</span></h2>
+    </div>
+    <p style="text-align: center; padding-bottom: 30px;">Have you seen any errors? Improvements? Doubts? Mail Us!</p>
+    <div class="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="mailto:quickfire534@gmail.com" class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 glow">Mail</a>
+      <a href="https://x.com/Quickfire_98" class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 glow">Twitter</a>
+      <a href="https://discord.gg/AyfMMPWQPQ" class="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-400 transition-all duration-300 glow">Community</a>
+    </div>
+  </section>
 
-  // Fade-scroll effect
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  <!-- ================= JS ================= -->
+  <script>
+    lucide.createIcons();
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navbar = document.getElementById('navbar');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('shadow-lg', 'shadow-black/30');
+      } else {
+        navbar.classList.remove('shadow-lg', 'shadow-black/30');
       }
     });
-  }, observerOptions);
 
-  document.querySelectorAll('.fade-scroll').forEach(element => {
-    observer.observe(element);
-  });
-</script>
+    // Fade-scroll effect
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-</body> 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-scroll').forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+
+</body>
 </html>
